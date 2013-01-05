@@ -13,6 +13,7 @@ class App < Sinatra::Base
 
   # Homepage
   get '/' do
+    @title = "Welcome"
     if current_user.nil?
       haml :index, :layout => :layout
     else
