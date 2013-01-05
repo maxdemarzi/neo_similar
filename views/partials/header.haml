@@ -1,0 +1,43 @@
+%header
+  .container
+    .navbar.navbar-inverse
+      .navbar-inner
+        %a.btn.btn-navbar{:data => {:toggle => "collapse", :target => ".nav-collapse"}}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.brand{:href => "/"}
+          Similar 2 Me
+        .nav-collapse.collapse
+          %ul.nav
+            %li
+              %a{:href =>"/"} Home
+            %li
+              %a{:href =>"/about"} About
+            -unless current_user.nil?
+              %li
+                %a{:href => "/user/#{current_user.uid}" } Profile
+              %li
+                %a{:href => "/user/#{current_user.uid}/friends"}Friends
+              %li
+                %a{:href => "/user/#{current_user.uid}/visualization"}Visualization
+            -else
+              %li
+                %a{:href =>"/signin"} Sign in
+          %p.navbar-text.pull-right
+            -unless current_user.nil?
+              .btn-group.pull-right
+                %a.btn.dropdown-toggle{:'data-togle' => "dropdown", :href => "#"}
+                  %i.icon-user
+                  ="#{current_user.name}"
+                  %span.caret
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "/user/#{current_user.uid}" } Profile
+                  %li
+                    %a{:href => "/user/#{current_user.uid}/friends"}Friends
+                  %li
+                    %a{:href => "/user/#{current_user.uid}/visualization"}Visualization
+                  %li.divider
+                  %li
+                    %a{:href => "/logout" } Logout

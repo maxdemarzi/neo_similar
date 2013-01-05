@@ -1,0 +1,55 @@
+#footer
+  .container
+    .row-fluid
+      .span3
+        %h3
+          Max De Marzi
+        %p
+          %i.fa-icon-map-marker 
+          37 E 4th Avenue, Suite1
+        %p
+          %i.fa-icon-map-marker 
+          San Mateo, CA 94401
+        %p
+          %i.fa-icon-phone 
+          Phone: 1-855-636-4532 
+        %p
+          %i.fa-icon-envelope 
+          Email: max@neotechnology.com 
+        %p
+          %i.fa-icon-globe 
+          %a{:href => "http://maxdemarzi.com"}
+            Web: maxdemarzi.com 
+      .span3
+        %h3
+          Latest Tweets
+        %ul#twitter
+        .clear
+      .span3
+        %h3
+          Flickr Photo Stream
+        .flickr-widget
+          %script{ :type => "text/javascript", :src =>"http://www.flickr.com/badge_code_v2.gne?count=12&display=latest&size=s&layout=x&source=user&user=29609591@N08"}
+      .span3
+        %h3 Follow Us		
+        %a.social-twitter{:href => "http://twitter.com/maxdemarzi"}
+        %a.social-linkedin{:href => "http://www.linkedin.com/pub/max-de-marzi/4/983/490/"}
+
+#under-footer
+  .container
+    .row-fluid
+      .span2
+        #under-footer-logo
+          %a.brand{:href => "/"} Similar 2 Me
+      .span9
+        #under-footer-copyright
+          &copy; 2013, 
+          %a{:href => "http://neotechnology.com"}
+            Neo Technology
+          &nbsp;
+          Built by
+          %a{:href => "http://maxdemarzi.com"}
+            Max De Marzi
+      .span1
+        #under-footer-back-to-top
+          %a{:href => "#"}

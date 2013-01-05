@@ -1,0 +1,75 @@
+!!! 5
+%html{ :lang => "en"}
+  %head
+    %title= "Neo Similar"
+    /[if lt IE 9]
+      %script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+
+
+    %meta{ 'http-equiv' => "Content-Type", :content => "text/html; charset=UTF-8"}
+    %meta{ :content => "Example Match Making site for people who are similar to me.", :name => "description" }
+    %meta{ :content => "Max De Marzi", :name => "author" }
+    %meta{ :content => "3 days", :name => "revisit-after" }
+
+    <!-- start: Mobile Specific -->
+    %meta{ :content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport" }
+    <!-- end: Mobile Specific -->
+
+    %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700")
+    %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif")
+    %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo")
+    %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic")
+    %link(rel="stylesheet" type="text/css" href="/css/bootstrap.css")
+    %link(rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css")
+    %link(rel="stylesheet" type="text/css" href="/css/style.css")
+    %link(rel="stylesheet" type="text/css" href="/css/layerslider.css")
+
+    <!--[if lt IE 9 ]>
+    %link(rel="stylesheet" type="text/css" href="/css/styleIE.css")
+    <![endif]-->
+
+    <!--[if IE 9 ]>
+    %link(rel="stylesheet" type="text/css" href="/css/styleIE9.css")
+    <![endif]-->
+
+    <!-- end: CSS -->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    %script{ :type => "text/javascript", :src =>"http://html5shim.googlecode.com/svn/trunk/html5.js"}
+    <![endif]-->
+
+  %body
+    %header
+      = haml  :'partials/header'
+    .container
+      #page-title
+        %h2= @title || "Page Title"
+      = yield
+    %footer
+      = haml  :'partials/footer'
+
+    %script{ :type => "text/javascript", :src =>"/js/jquery-1.8.2.js"}
+    %script{ :type => "text/javascript", :src =>"/js/isotope.js"}
+    %script{ :type => "text/javascript", :src =>"/js/jquery.imagesloaded.js"}
+    %script{ :type => "text/javascript", :src =>"/js/bootstrap.js"}
+    %script{ :type => "text/javascript", :src =>"/js/flexslider.js"}
+    %script{ :type => "text/javascript", :src =>"/js/carousel.js"}
+    %script{ :type => "text/javascript", :src =>"/js/jquery.cslider.js"}
+    %script{ :type => "text/javascript", :src =>"/js/slider.js"}
+    %script{ :type => "text/javascript", :src =>"/js/fancybox.js"}
+    %script{ :type => "text/javascript", :src =>"/js/twitter.js"}
+    %script{ :type => "text/javascript", :src =>"/js/jquery.placeholder.min.js"}
+
+    %script{ :type => "text/javascript", :src =>"/js/jquery-easing-1.3.js"}
+    %script{ :type => "text/javascript", :src =>"/js/layerslider.kreaturamedia.jquery.js"}
+
+    %script{ :type => "text/javascript", :src =>"/js/excanvas.js"}
+    %script{ :type => "text/javascript", :src =>"/js/jquery.flot.js"}
+    %script{ :type => "text/javascript", :src =>"/js/jquery.flot.pie.min.js"}
+    %script{ :type => "text/javascript", :src =>"/js/jquery.flot.stack.js"}
+    %script{ :type => "text/javascript", :src =>"/js/jquery.flot.resize.min.js"}
+
+    %script{ :defer => "defer", :type => "text/javascript", :src =>"/js/modernizr.js"}
+    %script{ :defer => "defer", :type => "text/javascript", :src =>"/js/retina.js"}
+    %script{ :defer => "defer", :type => "text/javascript", :src =>"/js/custom.js"}

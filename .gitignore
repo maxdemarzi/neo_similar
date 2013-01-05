@@ -1,0 +1,5 @@
+/redis
+/neo4j
+.DS_Store
+dump.rdb
+
